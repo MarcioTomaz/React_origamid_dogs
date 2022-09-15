@@ -3,6 +3,7 @@
 }
 
 body{
+  padding-top: 4rem;
   margin: 0px;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
@@ -23,6 +24,10 @@ ul, li{
 img {
   display: block;
   max-width: 100%;
+}
+
+a{
+  text-decoration: none;
 }
 
 button, input{
