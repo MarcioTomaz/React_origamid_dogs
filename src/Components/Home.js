@@ -1,5 +1,6 @@
 import React from 'react'
 import { UserContext } from '../UserContext'
+import Feed from './Feed/Feed'
 
 const Home = () => {
 
@@ -7,7 +8,9 @@ const Home = () => {
   console.log(usuario)
 
   return (
-    <div> <h1>{usuario.teste}</h1></div>
+    <section className="container mainContainer"> 
+      <Feed />
+    </section>
   )
 }
 
