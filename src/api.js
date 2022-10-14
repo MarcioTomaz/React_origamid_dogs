@@ -106,5 +106,8 @@ export function PHOTO_DELETE(id) {
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
     },
-  };
+  };  
 }
+
+
+
