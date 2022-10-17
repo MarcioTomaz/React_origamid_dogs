@@ -16,32 +16,33 @@ function App() {
 
 
   return (
-    <>
+    <div className="App">
       <BrowserRouter >
         <UserStorage>
           <Header />
-          <Routes >
-            <Route path="/" element={<Home />} />
-            <Route path="login/*" element={<Login />} />
-            {/* /* para dizer q tem sub-rotas dentro */}
+          <main className="AppBody">
+            <Routes >
+              <Route path="/" element={<Home />} />
+              <Route path="login/*" element={<Login />} />
+              {/* /* para dizer q tem sub-rotas dentro */}
 
-            <Route path="foto/:id" element={<Photo />} />
-            <Route path="perfil/:user" element={<UserProfile />} />
+              <Route path="foto/:id" element={<Photo />} />
+              <Route path="perfil/:user" element={<UserProfile />} />
 
-            <Route path="conta/*"
-              element=
-              {<ProtectedRoute>
-                <User />{/* passa o caminho protegido dentro dentro do protectedRoute */}
-              </ProtectedRoute>
-              }
-            />       
-            <Route path="*" element={<NotFound />} />
-
-          </Routes>
+              <Route path="conta/*"
+                element=
+                {<ProtectedRoute>
+                  <User />{/* passa o caminho protegido dentro dentro do protectedRoute */}
+                </ProtectedRoute>
+                }
+              />       
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
