@@ -6,6 +6,7 @@ import Header from "./Components/Header";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
+import Photo from "./Components/Photo/Photo";
 import User from "./Components/User/User";
 import { UserStorage } from "./UserContext";
 
@@ -22,13 +23,16 @@ function App() {
             <Route path="login/*" element={<Login />} />
             {/* /* para dizer q tem sub-rotas dentro */}
 
+            <Route path="foto/:id" element={<Photo />} />
+
+
             <Route path="conta/*"
               element=
               {<ProtectedRoute>
                 <User />{/* passa o caminho protegido dentro dentro do protectedRoute */}
               </ProtectedRoute>
               }
-            />
+            />       
 
           </Routes>
           <Footer />
