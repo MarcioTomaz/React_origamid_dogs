@@ -10,8 +10,7 @@ import UserStats from './UserStats'
 
 const User = () => {
 
-  const {data} = React.useContext(UserContext)
-
+  const { data } = React.useContext(UserContext);
   return (
     <section className="container">
       <Head title="Minha conta" />
